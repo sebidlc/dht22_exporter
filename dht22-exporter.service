@@ -3,7 +3,8 @@ Description=dht22 prometheus exporter
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/dht22_exporter.py 4 2
+ExecStart=python3 /usr/local/bin/dht22_exporter.py 4 2
+User=root
 
 [Install]
 WantedBy=default.target
